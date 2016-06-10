@@ -11,7 +11,7 @@ mkdir -p /var/ct/bind/etc/bind /var/ct/bind/var/bind /var/ct/bind/var/run/named
 ```
 
 ### Copy config files:
-tar xvf [bind.tar](https://github.com/2infinite/bind/blob/master/bind.tar) -C /var/ct/bind/etc/
+tar xvf [bind.tgz](https://github.com/2infinite/bind/blob/master/bind.tgz) -C /var/ct/bind/etc/
 
 ### Run BIND server:
 ```sh
