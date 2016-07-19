@@ -14,7 +14,7 @@ tar xvf [bind.tgz](https://github.com/2infinite/bind/raw/master/bind.tgz) -C /va
 
 ### Run BIND server:
 ```sh
-docker run -d --log-driver=syslog --restart=always --name bind --read-only=true \
+docker run -d --log-driver=syslog --log-opt tag="{{.Name}}/{{.ID}}" --restart=always --name bind --read-only=true \
 -v /var/ct/bind/etc/bind:/etc/bind -v /var/ct/bind/var/bind:/var/bind \
 -v /var/ct/bind/var/run/named:/var/run/named --cpuset-cpus="0-1" \
 --memory="256m" --kernel-memory="128m" --memory-swap="512m" -p 53:53/udp \
